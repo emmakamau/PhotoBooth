@@ -1,8 +1,83 @@
+/* 
+font-family: 'Indie Flower', cursive;
+font-family: 'PT Serif', serif;
+*/
+
 body{
     padding: 0;
     margin: 0;
     background-color: #E3CAA5;
+    font-family: 'PT Serif', serif;
 }
+
+/* Navbar styling */
+.main-nav ul{
+    display: flex;
+    margin-right:3vw;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .main-nav a{
+    color: inherit;
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  .main-nav a:hover{
+    font-size: larger;
+  }
+  
+  .main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #AD8B73;
+    color: white;
+  }
+  
+  .main-header{
+    height: 70px;
+  }
+
+  .brand-logo:hover{
+    text-decoration: none;
+  }
+  
+  .brand-logo:focus{
+    text-decoration: none;
+  }
+  
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .brand-logo-name {
+    margin-left: 1rem;
+    font-size:3rem;
+    font-family: 'Old Standard TT', serif;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .brand-logo-name:hover{
+    text-decoration: none !important;
+    color:white;
+  }
+  
+  .brand-logo-name:focus{
+    text-decoration: none;
+    color:white;
+  }
+
+  .nav-items{
+    font-size: large;
+    font-weight: bold;
+  }
 
 /* Homepage styling */
 
@@ -21,5 +96,5 @@ body{
     color: white;
     font-size:4rem;
     top: 50%;
-    position:absolute;
+    position:absolute;padding: 1vh;
 }

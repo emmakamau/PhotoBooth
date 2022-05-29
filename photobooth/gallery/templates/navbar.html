@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-    <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="{% url 'homepage' %}">PhotoBooth</a>
-            </div>
-        </div>
-    </nav>
+    <header class="main-header">
+        <a href="{% url 'homepage' %}" class="brand-logo">
+            <div class="brand-logo-name">PhotoBooth</div>
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="nav-items">Travel</a></li>
+                <li><a href="#" class="nav-items">Food</a></li>
+                <li><a href="#" class="nav-items">Potraits</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
+
 </html>
