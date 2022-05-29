@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #E3CAA5;
+}
+
+/* Homepage styling */
+
+.homepage{
+    background-image: url('assets/homepage.jpeg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin: 0;
+    height: 100vh;
+    color:black;
+    font-weight: bold;
+    position: relative;
+}
+
+.homepage-title{
+    color: white;
+    font-size:4rem;
+    top: 50%;
+    position:absolute;
+}
