@@ -8,7 +8,7 @@ def homepage(request):
     return render(request,'index.html')
 
 def travel(request):
-    travel_images = Image.objects.filter(category='travel')
+    travel_images = Image.objects.all()
 
     context={
         'travel_images':travel_images
