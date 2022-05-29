@@ -8,7 +8,7 @@ def homepage(request):
     return render(request,'index.html')
 
 def travel(request):
-    travel_images = Image.objects.filter(image_category='0')
+    travel_images = Image.objects.filter(image_category='1')
 
     context={
         'travel_images':travel_images
@@ -16,7 +16,7 @@ def travel(request):
     return render(request,'category/travel.html',context=context)
 
 def food(request):
-    food_images = Image.objects.filter(image_category='0')
+    food_images = Image.objects.filter(image_category='2')
 
     context={
         'food_images':food_images
@@ -24,7 +24,7 @@ def food(request):
     return render(request,'category/food.html',context=context)
 
 def potraits(request):
-    potraits_images = Image.objects.filter(image_category='0')
+    potraits_images = Image.objects.filter(image_category='3')
 
     context={
         'potraits_images':potraits_images

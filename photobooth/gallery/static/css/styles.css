@@ -98,3 +98,8 @@ body{
     top: 50%;
     position:absolute;padding: 1vh;
 }
+
+/* Travel page */
+.travel-page{
+    padding: 2vh 6vw;
+}
