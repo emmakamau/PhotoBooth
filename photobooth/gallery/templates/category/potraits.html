@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="travel-page">
+    <div class="row">
+        {% for item in potraits_images %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+            <p>{{ item.image_name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
