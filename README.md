@@ -26,7 +26,11 @@ An IDE such as VS code with Python version 3 installed,a terminal and a browser.
 
 BDD focuses on how the user will interact with the application.
 What you will see and experience:
-
+1. Landing page with Navbar. 
+2. Click on **Gallery** to view all image uploads.
+3. Select category on the drop down category box and filter by category.
+4. Hover over the image to enlarge it.
+5. Click on the image to view more information on a modal.
 
 ## Development
 To fix a bug or enhance an existing module, follow these steps:
@@ -37,11 +41,6 @@ To fix a bug or enhance an existing module, follow these steps:
 - Commit your changes (git commit -am 'Improve feature')
 - Push to the branch (git push origin improve-feature)
 - Create a Pull Request
-
-## Known Bugs
-- A user can vote more than once.
-- Images do not display from db. 
-- A user can only delete a blog post where it's yet to be voted or commented on
 
 If you find a bug or would like to request a new function, reach out to me via Email: emmaculatewkamau@gmail.com or on [LinkedIn](https://www.linkedin.com/in/emmaculate-k-987353104/)
 
