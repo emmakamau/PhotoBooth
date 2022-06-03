@@ -14,6 +14,7 @@ body{
 .main-nav ul{
     display: flex;
     margin-right:3vw;
+    margin-top: 3vh;
     padding: 0;
     list-style: none;
   }

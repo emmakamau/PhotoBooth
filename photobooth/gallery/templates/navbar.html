@@ -19,10 +19,14 @@
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <div class="input-group">
-                                <input type="text" name="category" class="form-control bg-transparent"
-                                    placeholder="potraits, food">
-                                <button class="btn search" id="button-addon2" type="submit"><i
-                                        class="fas fa-search text-light"></i>
+                                <label for="select-category" class="nav-items">Category</label>&nbsp;&nbsp;
+                                <select class="form-control" id="select-category" name="category">
+                                    {% for item in category %}
+                                    <option>{{item.name}}</option>
+                                    {% endfor %}
+                                </select>
+                                <button class="btn btn-light search" id="button-addon2" type="submit">
+                                    <i class="fas fa-search"></i>
                                 </button>
                             </div>
                         </div>

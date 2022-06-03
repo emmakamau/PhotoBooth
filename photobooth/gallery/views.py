@@ -5,7 +5,11 @@ from .models import *
 
 # Create your views here.
 def homepage(request):
-    return render(request,'index.html')
+    category = Category.objects.all()
+    context={
+        'category':category
+    }
+    return render(request,'index.html',context=context)
 
 def gallery(request):
     gallery = Image.objects.all()
@@ -17,12 +21,15 @@ def gallery(request):
     return render(request,'category/gallery.html',context=context)
 
 def search_by_category(request):
+    category = Category.objects.all()
     if request.method == 'POST':
         category = request.POST.get('category')
-        search_image = Image.search_image(category)
+        print(category)
+        search_image = Image.get_image_by_category(category)
         
         context={
-            'search_image':search_image
+            'search_image':search_image,
+            'category':category
         }
         return render(request,'category/search.html', context=context)
     return redirect('/')
