@@ -45,13 +45,6 @@ To fix a bug or enhance an existing module, follow these steps:
 
 If you find a bug or would like to request a new function, reach out to me via Email: emmaculatewkamau@gmail.com or on [LinkedIn](https://www.linkedin.com/in/emmaculate-k-987353104/)
 
-## Future Plans
-- Ensure a user can only vote once for a particular blog.
-- Display the owner of the blog.
-- Ability to delete blog posts that have been voted or commented on.
-- Save and display images from AWS S3 buckets
-- Ability to navigate to other users profiles if any.
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
