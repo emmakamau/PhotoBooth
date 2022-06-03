@@ -40,6 +40,11 @@ class TestImage(TestCase):
         self.example_image.save_image()
         all_images = Image.objects.all()
         self.assertTrue(len(all_images) == 1)
+    
+    def test_delete_image(self):
+        self.example_image.save_image()
+        self.example_image.delete_image(self.example_image.id)
+        self.assertTrue(len(Image.objects.all()) == 0)
 
     def test_update_image(self):
         self.example_image.save_image()
@@ -60,3 +65,18 @@ class TestImage(TestCase):
         updated_image = self.example_image
 
         self.assertEqual(self.example_image, updated_image)
+
+    def test_get_image_by_id(self):
+        self.example_image.save_image()
+        image = self.example_image.get_image_by_id(self.example_image.id)
+        self.assertEqual(self.example_image, image)
+
+    def test_get_images_by_category(self):
+        self.example_image.save_image()
+        searched = self.example_image.get_image_by_category("New Category")
+        self.assertTrue(len(searched) == 1)
+
+    def test_get_images_by_location(self):
+        self.example_image.save_image()
+        searched = self.example_image.get_image_by_location("Nairobi")
+        self.assertTrue(len(searched) == 1)
