@@ -101,7 +101,49 @@ body{
     position:absolute;padding: 1vh;
 }
 
-/* Travel page */
+/* Gallery page */
 .category-pages{
     padding: 2vh 6vw;
+}
+
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+.card{
+  margin: 2vh;
+  border: none;
+}
+
+.image-display{
+  margin: 0;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.btn-close{
+  background-color: none;
+  border: none;
+}
+
+.image-btn{
+  border: 0px solid transparent;
+  height: 100%;
+  background-color:#E3CAA5;
+  outline: none;
+}
+
+.modal-dialog{
+  border: none;
+}
+
+.modal-content{
+  background-color:#AD8B73;
+  color: white;
+  border: none;
+}
+
+.modal-backdrop {
+  background-color:#E3CAA5;
 }
