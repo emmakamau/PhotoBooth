@@ -35,3 +35,28 @@ class TestImage(TestCase):
 
     def test_image_instance(self):
         self.assertTrue(isinstance(self.example_image, Image))
+
+    def test_save_image(self):
+        self.example_image.save_image()
+        all_images = Image.objects.all()
+        self.assertTrue(len(all_images) == 1)
+
+    def test_update_image(self):
+        self.example_image.save_image()
+
+        self.updated_category = Category(name="Food")
+        self.updated_category.save()
+        self.updated_location = Location(name="Nyeri")
+        self.updated_location.save()
+
+        self.example_image.update_image(
+            new_image="../media/cow.jpeg",
+            new_image_name="New_Img",
+            new_image_desc="Test image update",
+            new_image_location=self.updated_location,
+            new_image_category=self.updated_category,
+        )
+
+        updated_image = self.example_image
+
+        self.assertEqual(self.example_image, updated_image)
