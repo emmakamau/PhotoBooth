@@ -8,3 +8,10 @@ class TestCategory(TestCase):
 
     def test_category_instance(self):
         self.assertTrue(isinstance(self.example_category, Category))
+
+class TestLocations(TestCase):
+    def setUp(self) -> None:
+        self.example_location = Location(name="Nairobi")
+
+    def test_location_instance(self):
+        self.assertTrue(isinstance(self.example_location, Location))
