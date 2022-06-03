@@ -21,11 +21,12 @@ def gallery(request):
     return render(request,'category/gallery.html',context=context)
 
 def search_by_category(request):
-    category = Category.objects.all()
+    
     if request.method == 'POST':
         category = request.POST.get('category')
         print(category)
         search_image = Image.get_image_by_category(category)
+        category = Category.objects.all()
         
         context={
             'search_image':search_image,
