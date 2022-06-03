@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="category-pages travel-page">
+    <div class="row">
+        {% for item in search_image %}
+        <div class="card" style="width: 18rem;">
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#{{ item.image_name }}">
+                <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="{{ item.image_name }}" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">{{ item.image_name }}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+                        {{ item.image_desc }}
+                        <div class="mt-4">
+                            Category: {{ item.image_category }} <br>
+                            Location: {{ item.image_location }} <br>
+                            <button type="button" class="btn" onclick="copy_url('{{ item.image.url }}')" id="copy">Copy
+                                link</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

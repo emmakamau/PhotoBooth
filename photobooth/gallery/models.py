@@ -19,6 +19,18 @@ class Image(models.Model):
     def __str__(self):
         return self.image_name
 
+    @classmethod
+    def search_image(cls,category):
+        '''
+        Method to search image based on category
+        '''
+        try:   
+            category = Category.objects.get(name=category)
+            category_list = Image.objects.filter(image_category=category.id)
+            return category_list
+        except Exception:
+            return "No images found"
+
 class Location(models.Model):
     name = models.CharField(max_length=255)
 
