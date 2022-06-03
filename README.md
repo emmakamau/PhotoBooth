@@ -30,7 +30,7 @@ What you will see and experience:
 2. Click on **Gallery** to view all image uploads.
 3. Select category on the drop down category box and filter by category.
 4. Hover over the image to enlarge it.
-5. Click on the image to view more information on a modal.
+5. Click on the image to view more information on a modal grid style.
 
 ## Development
 To fix a bug or enhance an existing module, follow these steps:
